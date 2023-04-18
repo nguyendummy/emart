@@ -1,0 +1,148 @@
+.emart .img-emart .emart-circle {
+    position: absolute;
+    mask-image: url(../components-emart/mask-circle.png);
+    -webkit-mask-image: url(../components-emart/mask-circle.png);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    top: calc(53% - 1px);
+    left: calc(52% - 1px);
+}
+.emart-circle > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i)));
+    color: red;
+    /* font-size: calc(30px * var(--i)); */
+    font-size: calc(10px + var(--i) * 15px);
+    background-color: transparent;
+    animation: heart calc(1s * var(--i)) linear calc(1s * var(--i) - 1s) infinite;
+    z-index: calc(10 - var(--i));
+    transition: all calc(1s * var(--i) - 0.5s) linear 0s;
+}
+
+.emart-circle > i:nth-child(3){
+    animation: heart2 calc(1s * var(--i) - 1s) linear infinite;
+}
+.emart-circle > i:nth-child(4) {
+    animation: heart3 calc(1s * var(--i) - 1.5s) linear infinite;
+}
+.emart-circle > i:nth-child(5){
+    animation: heart4 calc(1s * var(--i) - 2.5s) linear infinite;
+}
+.bg-heart {
+    background: linear-gradient(to right, rgb(244, 114, 182), rgb(225, 29, 72), rgb(56, 189, 248));
+    width: 100%;
+    height: 100%;
+    width: 300px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 3s linear 0s;
+    animation: bg_linear 5s linear infinite;
+}
+@keyframes bg_linear {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: -220px
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+.emart-circle > i::before {
+    background-color: transparent;
+}
+@keyframes heart4 {
+    0%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1);
+        color: rgb(180, 47, 207);
+    }
+    30%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i) )) scale(1.3);
+        color: rgb(233, 10, 10);
+    }
+    50%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.4);
+        color: rgb(226, 23, 192);
+    }
+    90%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.3);
+        color: rgb(200, 12, 62);
+    }
+    100%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1);
+        color: rgb(30, 89, 199);
+    }
+}
+@keyframes heart3 {
+    0%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1);
+        color: rgb(58, 133, 183);
+    }
+    30%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i) )) scale(1.3);
+        color: rgb(171, 51, 121);
+    }
+    50%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.4);
+        color: rgb(218, 21, 70);
+    }
+    90%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.5);
+        color: rgb(50, 89, 149);
+    }
+    100%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.6);
+        color: rgb(219, 37, 195);
+    }
+}
+@keyframes heart2 {
+    0%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1);
+        color: red;
+    }
+    30%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i) )) scale(1.3);
+        color: rgb(211, 100, 165);
+    }
+    50%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.4);
+        color: rgb(184, 103, 170);
+    }
+    90%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.5);
+        color: rgb(59, 121, 215);
+    }
+    100%{
+        transform: translate(calc(-50% - 2px),calc(-50% + 1px * var(--i))) scale(1.6);
+        color: red;
+    }
+}
+
+
+@keyframes heart {
+    0%{
+        transform: translate(calc(-50% - 2px),-50%) scale(1);
+    }
+    30%{
+        transform: translate(calc(-50% - 2px),-50%) scale(1.3);
+        color: rgb(193, 30, 125);
+    }
+    50%{
+        transform: translate(calc(-50% - 2px),-50%) scale(1.4);
+        color: rgb(220, 35, 186);
+
+    }
+    90%{
+        transform: translate(calc(-50% - 2px),-50%) scale(1.5);
+        color: rgb(33, 104, 211);
+    }
+    100%{
+        transform: translate(calc(-50% - 2px),-50%) scale(1.6);
+    }
+}

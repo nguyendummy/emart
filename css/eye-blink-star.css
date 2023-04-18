@@ -1,0 +1,49 @@
+
+.eye-blink-star{
+    width: 100px;
+    height: 100px;
+    /* top: 30%;
+    right: 8%; */
+    top: 28%;
+    right: 4%;
+    position: absolute;
+    mask-image: url(../components-emart/mask-blink-eye1.png);
+    -webkit-mask-image: url(../components-emart/mask-blink-eye1.png);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--cl-blue--);
+    transform: rotate(-7deg);
+    opacity: 1;
+    transition: all 0.25s linear 0.9s;
+    animation: 3s linear 0s alternate-reverse;
+    display: none;
+}
+.eyelash-blink {
+    /* right: 50px !important;
+    top: 42% !important; */
+    right: 40px !important;
+    top: 38% !important;
+    display: none;
+}
+.eyelash-blink > i {
+    color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    transition: all 0.25s linear 0s;
+    transform: scale(0.1);
+    opacity: 0;
+}
+@keyframes animationEyeBlinkStar {
+    0%{
+
+    }
+    50%{
+        top: 30%;
+        right: 8%;
+    }
+    100%{
+
+    }
+}
